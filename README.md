@@ -8,3 +8,6 @@ Arduino interface is controlling precharge and is telling main chip of the volta
 There is a 5pin connector on LED lines that could be used to transmit controler status inside a cabin on the dash. 
 
 Revision 2 was not viable since Rev 3 has some major changes and will be used directly.
+In R3 i changed design of voltage sensing with isolated op amp and a second op amp to boos signal to be accepted by Arduino Nano chip.
+
+In R3.1 i decided to discard Nano because of its inherent bootlayer instability. I will use a simple Pic12F1822 chip programmed to detect voltage, then trigger Tip122 for precharge. Its other pins maight be used to translate HV voltage to Lebowski brain and to keep brain in reset untill precharge is done.
